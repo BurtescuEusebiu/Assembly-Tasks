@@ -1,20 +1,21 @@
-README
+# Algorithms & Assembly Tasks
 
-TASK 1
-Programul verifica daca parantezele citite sunt distribuite corect.
-Folosind 3 indici pentru fiecare tip de paranteza se incrementeaza/decrementeaza, pt paranteze deschise/inchise. Daca indicii vor ajunge negativi la un moment dat inseamna ca e gresit inputul. Daca in final indicii sunt diferiti de 0, de asemenea inseamna ca este gresit. In rest daca nu se ajunge intr-una dintre siutatii inputul este corect.
+**Bracket Validator, Sorting & Searching, Graph Traversal, x64 Map/Reduce | C / C++ / x64 Assembly**
 
-TASK 2
-1.QUICK SORT
-Se foloseste algoritmul QUICKSORT standard. Pivotul este ales drept ultimul element. Se verifica toate elementele din stanga si din dreapta acestuia astfel incat toate cele din dreapta sa fie mai mari si toate cele din stanga mai mici.
-Pe urma se apeleaza recursiv functia din nou pe intervalul din stanga pivotului, si pe intervalul din dreapta pivotului.
+- **Task 1 – Bracket Validator**  
+  - Implemented a program to check if parentheses, brackets, and braces are correctly balanced  
+  - Used three separate counters for `()`, `[]`, `{}` to increment/decrement on open/close  
+  - Input is invalid if any counter becomes negative or is non-zero at the end
 
-2.BINARY SEARCH
-Se foloseste algoritmul BINARYSEARCH standard. Se calculeaza indexul elementului din mijloc si se verifica daca elementul cautat X este mai mare sau mai mic si se apeleaza recursiv in intervalul din stanga mijlocului,respectiv din dreapta acestuia pana in mijloc am ajuns la elementul cautat sau s-a terminat cautarea completa, returnandu-se pozitia acestuia, respectiv -1.
+- **Task 2 – Sorting & Searching**  
+  - **Quick Sort:** Standard algorithm with last element as pivot, recursively sorting left and right partitions  
+  - **Binary Search:** Standard algorithm, recursively searching left or right half until element is found or search completes, returning index or -1
 
-TASK 3
-DFS
-Se foloseste algoritmul DFS standard. Se initializeaza un vector vizitat cu 0-uri. Parcurgem toate nodurile astfel: punem in vizitat[nod curent] 1, si verificam toti vecinii daca au fost vizitati sau nu. In caz contrat se apeleaza recursiv DFS pentru acel nod. Printarea se face pt fiecare nod, odata cu "vizitarea" acestuia pentru prima data.
+- **Task 3 – Depth-First Search (DFS)**  
+  - Implemented standard DFS on graphs using a visited array  
+  - Nodes are marked visited upon first exploration and all unvisited neighbors are recursively visited  
+  - Printed nodes in the order they are first visited
 
-BONUS
-Se creeaza functiile MAP si REDUCE in x64. Folosind x86 calling conventions, modificam registri necesari si apelam functiile date, modificat destinatie, respectiv acc.
+- **Bonus – Map & Reduce in x64 Assembly**  
+  - Created `MAP` and `REDUCE` functions using x64 calling conventions  
+  - Manipulated registers for destination and accumulator to call user-defined functions  
